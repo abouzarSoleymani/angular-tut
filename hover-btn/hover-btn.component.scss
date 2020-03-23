@@ -1,0 +1,43 @@
+.hbtn{
+  position: relative;
+  height: 60px;
+  border-radius: 5px;
+  background-color: #5323c4;
+  box-shadow: 2px 2px 0 #fff;
+  border: 1px solid #fff;
+  padding: 0 30px;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all .2s cubic-bezier(.21, -0.67, .76, 1.63);
+  &:hover{
+    height: 80px;
+    font-size: 30px;
+    padding: 0 40px;
+    box-shadow: 5px 5px 0 #FFF;
+    &:after {
+      animation: shine 1s .2s ease-in-out forwards;
+    }
+  }
+  &:after{
+    content:'';
+    position: absolute;
+    top:-50%;
+    left:-60%;
+    width: 50%;
+    height: 200%;
+    background: linear-gradient(
+    90deg,
+    rgba(209, 112, 60, 0),
+    rgba(255, 255, 255, 0.5) 50%,
+    rgba(209, 112, 60, 0 )
+    );
+    transform: rotate(-30deg);
+  }
+}
+@keyframes shine {
+  100%{
+    transform: rotate(-30deg) translate(320%, 120%);
+  }
+}

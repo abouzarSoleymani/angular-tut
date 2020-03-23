@@ -1,0 +1,15 @@
+<div class="container">
+  <div id="upload-file">
+    <label class="hoverable" for="fileInput" ondragover="return false;" (drop)="handleDrop($event)">
+      <img class="uploaded-img" [src]="url ? url : 'https://previews.123rf.com/images/kritchanut/kritchanut1406/kritchanut140600093/29213195-male-silhouette-avatar-profile-picture.jpg'">
+      <div class="hover-text">
+        Choose file
+        <h4 class="success-message" *ngIf="url"> Uploaded Successfully </h4>
+      </div>
+      <div class="background"></div>
+    </label>
+    <br/>
+    <input id="fileInput" type='file' (change)="handleInputChange($event)">
+    <button *ngIf="url" (click)="delete()">delete</button>
+  </div>
+</div>
